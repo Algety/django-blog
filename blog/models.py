@@ -39,3 +39,9 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
+    
+
+class About(models.Model):
+    title = models.CharField()
+    text = models.TextField()
+    updated = models.DateTimeField(auto_now_add=True)
